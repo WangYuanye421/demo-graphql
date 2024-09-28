@@ -1,0 +1,27 @@
+# 查询类型
+type Query{
+    # 通过ID查询
+    getById(id: ID): Book
+    # 通过name查询
+    #bookByName(name: String!) :[Book]
+}
+
+# 变异类型
+type Mutation{
+    createBook(name: String, pageCount: Int!, authorFirstName: String, authorLastName:String): Book
+    #updateBook(id: ID, name: String!, pageCount: Int!): Book
+    #deleteBook(id:ID): String
+}
+
+# 自定义类型
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    author: Author
+}

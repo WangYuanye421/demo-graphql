@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo-graphQL
+  graphql:
+    graphiql:
+      enabled: true
+    cors:
+      allowed-origins: "*"
+    schema:
+      printer:
+        enabled: true
+server:
+  port: 8081
+
+#debug: true
